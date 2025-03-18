@@ -1,1 +1,1 @@
-arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno --input-dir tmp/compiledSketch sketch
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno

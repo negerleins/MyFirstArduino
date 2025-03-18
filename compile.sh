@@ -1,1 +1,3 @@
-arduino-cli compile --build-path tmp/compiledSketch --fqbn arduino:avr:uno sketch
+#!/bin/bash
+
+arduino-cli compile --fqbn arduino:avr:uno .
