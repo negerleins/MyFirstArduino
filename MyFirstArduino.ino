@@ -1,5 +1,5 @@
-#include "Led.h"
-#include "Button.h"
+#include "src/Led.h"
+#include "src/Button.h"
 
 #define LED_PIN 13
 #define BUTTON_PIN 5
@@ -18,9 +18,11 @@ void loop()
   if (!button.isPressed())
   {
     led.on();
-  }
-  else
-  {
+    delay(155);
+    led.off();
+    delay(155);
+    led.on();
+    delay(155);
     led.off();
   }
 }
