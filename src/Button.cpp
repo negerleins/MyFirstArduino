@@ -6,6 +6,9 @@ void Button::begin() {
     pinMode(pin, INPUT_PULLUP);
 }
 
-bool Button::isPressed() {
-    return digitalRead(pin) == LOW;
+Button::Status Button::status() {
+    Button::Status status;
+    
+    status.read = digitalRead(pin);
+    return status;
 }

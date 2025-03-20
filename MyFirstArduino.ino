@@ -1,28 +1,27 @@
-#include "src/Led.h"
+#include "src/Digital.h"
 #include "src/Button.h"
 
-#define LED_PIN 13
+#define LED_PIN 4
 #define BUTTON_PIN 5
 
-Led led(LED_PIN);
+Digital speaker(LED_PIN);
 Button button(BUTTON_PIN);
 
 void setup()
 {
-  led.begin();
+  speaker.begin();
   button.begin();
 }
 
 void loop()
 {
-  if (!button.isPressed())
+  if (button.status().read == HIGH)
   {
-    led.on();
-    delay(155);
-    led.off();
-    delay(155);
-    led.on();
-    delay(155);
-    led.off();
+    speaker.write(LOW);
+  }
+
+  if (speaker.status().read == LOW)
+  {
+    speaker.write(HIGH);
   }
 }

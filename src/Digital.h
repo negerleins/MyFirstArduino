@@ -1,15 +1,16 @@
-#ifndef BUTTON_H
-#define BUTTON_H
+#ifndef DIGITAL_H
+#define DIGITAL_H
 
 #include <Arduino.h>
 
-class Button {
+class Digital {
     private:
         uint8_t pin;
 
     public:
-        Button(uint8_t pin);
+        Digital(uint8_t pin);
         void begin();
+        void write(int input);
 
         struct Status { int read; };
         Status status();
