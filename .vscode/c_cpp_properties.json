@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**", // Include all files in the workspace
-                "${workspaceFolder}/src" // Include custom source files (e.g., libraries)
+                "${workspaceFolder}/.lib/**" // Include custom source files (e.g., libraries)
             ],
             "defines": [
                 "__AVR_ATmega328P__", // Define your specific microcontroller (e.g., ATmega328P for Arduino Uno)
