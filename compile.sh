@@ -1,15 +1,13 @@
 #!/bin/bash
 
-# Define the Fully Qualified Board Name (FQBN) for your board
 BOARD_FQBN="arduino:avr:uno"
+SKETCH_PATH=$(pwd)
 
-# Path to the sketch folder
-SKETCH_PATH="/home/leins/Projects/MyFirstArduino"
+# Explicitly add the library path
+LIBRARY_PATH="$SKETCH_PATH/src"
 
-# Compile the sketch using arduino-cli, including the hidden .lib folder
-arduino-cli compile --fqbn $BOARD_FQBN --libraries "$SKETCH_PATH/.lib" $SKETCH_PATH
+arduino-cli compile --fqbn $BOARD_FQBN --libraries "$LIBRARY_PATH" $SKETCH_PATH
 
-# Check if compilation was successful
 if [ $? -eq 0 ]; then
     echo "Compilation successful!"
 else

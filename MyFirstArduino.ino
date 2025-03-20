@@ -1,5 +1,5 @@
-#include ".lib/Led/src/Led.h"
-#include ".lib/Button/src/Button.h"
+#include "src/Led.h"
+#include "src/Button.h"
 
 #define LED_PIN 13
 #define BUTTON_PIN 5

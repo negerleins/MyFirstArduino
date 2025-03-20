@@ -1,20 +1,21 @@
 {
-    "configurations": [
-        {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**", // Include all files in the workspace
-                "${workspaceFolder}/.lib/**" // Include custom source files (e.g., libraries)
-            ],
-            "defines": [
-                "__AVR_ATmega328P__", // Define your specific microcontroller (e.g., ATmega328P for Arduino Uno)
-                "ARDUINO=10810"       // Define Arduino version (adjust if necessary)
-            ],
-            "compilerPath": "/usr/bin/avr-gcc", // Use avr-gcc instead of clang for better compatibility
-            "cStandard": "c17", // Use C17 standard
-            "cppStandard": "c++17", // Use C++17 standard
-            "intelliSenseMode": "linux-gcc-x64" // Use GCC IntelliSense mode for AVR development
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": ["${workspaceFolder}/**"],
+      "browse": {
+        "path": [],
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "defines": [
+        "__AVR_ATmega328P__", // Define your specific microcontroller (e.g., ATmega328P for Arduino Uno)
+        "ARDUINO=10810" // Define Arduino version (adjust if necessary)
+      ],
+      "compilerPath": "/usr/bin/avr-gcc", // Use avr-gcc instead of clang for better compatibility
+      "cStandard": "c17", // Use C17 standard
+      "cppStandard": "c++17", // Use C++17 standard
+      "intelliSenseMode": "linux-gcc-x64" // Use GCC IntelliSense mode for AVR development
+    }
+  ],
+  "version": 4
 }
