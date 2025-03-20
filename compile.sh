@@ -1,9 +1,10 @@
 #!/bin/bash
 
+# This script compiles the Arduino sketch using arduino-cli
+
 BOARD_FQBN="arduino:avr:uno"
 SKETCH_PATH=$(pwd)
 
-# Explicitly add the library path
 LIBRARY_PATH="$SKETCH_PATH/src"
 
 arduino-cli compile --fqbn $BOARD_FQBN --libraries "$LIBRARY_PATH" $SKETCH_PATH
